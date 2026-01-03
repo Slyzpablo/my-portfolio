@@ -473,9 +473,51 @@ button {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    padding: 15px;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: var(--transition-mid);
+    border: 1px solid var(--glass-border);
+}
+
+.about-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    object-fit: cover;
+    transform: rotate(-2deg);
+    transition: var(--transition-slow);
+    box-shadow: var(--card-shadow);
+}
+
+.about-image-wrapper:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.about-image-wrapper:hover .about-image {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .about-text h3 {
@@ -909,8 +951,14 @@ footer {
         gap: 40px;
     }
 
-    .about-text {
+    .about-text,
+    .about-visual {
         text-align: center;
+    }
+
+    .about-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
     }
 
     .about-stats {

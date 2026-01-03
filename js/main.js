@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
 
     // Add reveal class to revealable elements
-    const revealables = document.querySelectorAll('.hero-content, .hero-visual, .section-header, .about-text, .about-skills, .project-card, .service-card, .contact-info, .contact-form');
+    const revealables = document.querySelectorAll('.hero-content, .hero-visual, .section-header, .about-text, .about-skills, .about-visual, .project-card, .service-card, .contact-info, .contact-form');
     revealables.forEach(el => {
         el.classList.add('reveal-item');
         revealObserver.observe(el);
