@@ -897,6 +897,44 @@ button {
     border-color: var(--accent-primary);
 }
 
+.hidden {
+    display: none !important;
+}
+
+.form-status {
+    padding: 60px 40px;
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.status-content i {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.status-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.status-content p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-full {
+    width: 100%;
+}
+
+
 /* 
    -----------------------------------------
    FOOTER
@@ -1031,3 +1069,17 @@ footer {
         justify-content: center;
     }
 }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}

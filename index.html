@@ -375,23 +375,32 @@
                         </div>
                     </div>
 
-                    <form class="contact-form glass reveal-item">
+                    <form id="contact-form" class="contact-form glass reveal-item" action="https://formspree.io/f/xgoprnna" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder=" " required>
+                            <input type="text" id="name" name="name" placeholder=" " required>
                             <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder=" " required>
+                            <input type="email" id="email" name="email" placeholder=" " required>
                             <label for="email">Your Email</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder=" " required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
                             <label for="message">Your Message</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary w-full">
                             Send Message <i class="bi bi-send ml-2"></i>
                         </button>
                     </form>
+                    <div id="form-status" class="form-status hidden glass">
+                        <div class="status-content">
+                            <i class="bi bi-check-circle-fill icon-gradient"></i>
+                            <h3>Message Sent!</h3>
+                            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                            <button id="reset-form" class="btn btn-secondary">Send Another Message</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
